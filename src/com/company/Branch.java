@@ -1,5 +1,6 @@
 package com.company;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Branch {
@@ -14,6 +15,10 @@ public class Branch {
 
     public String getName() {
         return name;
+    }
+
+    public ArrayList<Customer> getCustomers() {
+        return customers;
     }
 
     public boolean newCustomer(String name, double initialAmount) {
