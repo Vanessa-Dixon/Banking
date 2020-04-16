@@ -6,7 +6,7 @@ public class Bank {
     private String name;
     private ArrayList<Branch> branches;
 
-    public Bank(String name, String branch) {
+    public Bank(String name) {
         this.name = name;
         this.branches = new ArrayList<Branch>();
     }
@@ -37,7 +37,7 @@ public class Bank {
         return false;
     }
 
-    private Branch findCustomer(String branchName) {
+    private Branch findBranch(String branchName) {
         for (int i = 0; i < this.branches.size(); i++) {
             Branch checkedBranch = this.branches.get(i);
             if (checkedBranch.getName().equals(branchName)) {
@@ -48,7 +48,7 @@ public class Bank {
     }
 
     public boolean listCustomers(String branchName, boolean showTransactions) {
-        Branch branch = findCustomer(branchName);
+        Branch branch = findBranch(branchName);
         if (branch != null) {
             System.out.println("Customer details for branch " + branch.getName());
 
