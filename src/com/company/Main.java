@@ -11,11 +11,18 @@ public class Main {
         bank.addCustomer("Adelaide","Derek", 18500.02 );
         bank.addCustomer("Adelaide","John", 1752.00 );
 
-        bank.addBranch("Georgia");
-        bank.addCustomer("Georgia", "Ben", 2.00);
+//        bank.addBranch("Georgia");
+//        bank.addCustomer("Georgia", "Vanessa", 2.00);
 
-        bank.addCustomerTransaction("Georgia", "Ben", 5.00);
+        bank.addCustomerTransaction("Adelaide", "Derek", 5.00);
+        bank.addCustomerTransaction("Adelaide", "John", 44.10);
 
         bank.listCustomers("Adelaide", false);
+
+        if(!bank.addCustomerTransaction("Malborn", "Brain", 5.10)) {
+            System.out.println("Error Melbourne branch");
+        };
     }
+
+
 }
